@@ -25,11 +25,11 @@ export function asciiHearts(containerId) {
     // AsciiEffect
     const customCharSet = ' ♡❣♥☺x6☹%&*⛆@#❤☺☻'
     const asciiOptions = {
-        invert: false,
+        invert: true,
         resolution: 0.3, // Adjust for more or less detail
         scale: 1.0,       // Adjust based on display requirements
         color: false,  
-        block: false,
+        block: true,
     };  
 
     // AsciiEffect with custom parameters

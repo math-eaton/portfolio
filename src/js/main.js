@@ -1,15 +1,37 @@
 ////////
 
 
-import { asciiShader } from "./ascii_shader.js";
+// import { asciiShader } from "./ascii_shader.js";
+
+// import { iso3D } from "./iso3D.js";
 import { asciiHearts } from "./asciiHearts.js";
+// import { terrain } from "./terrain.js";
+import { wavetable } from "./wavetable.js";
+import { isometricCube } from "./isometricCube.js";
+import { sonicParameters } from "./parameters.js";
 
-window.onload = () => {
 
-// asciiShader("asciiContainer1");
-asciiHearts("asciiHeartsContainer1")
+document.addEventListener("DOMContentLoaded", (event) => {
+  setTimeout(() => {
+  asciiHearts("asciiHeartsContainer1")
+    // terrain("terrainContainer1");
+    // wavetable("wavetableContainer1");
+    // wavetable("wavetableContainer2");
+    isometricCube("isoCubeContainer1");
+    sonicParameters("sonicParametersContainer");
+  }, 500);
+});
 
-}
+// iso3D();
+//   }, 1000);
+// });
+
+
+// window.onload = () => {
+
+// // asciiShader("asciiContainer1");
+
+// }
 
 
 // document.getElementById('asciiContainer1').style.display = 'block';

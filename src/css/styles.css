@@ -33,7 +33,7 @@ button {
   
 }
 
-.windows-container {
+.section {
   display: flex; /* Set the parent container as a flex container */
   justify-content: space-between; /* Distribute items along the main axis */
   align-items: center; /* Align items vertically */
@@ -46,6 +46,7 @@ button {
   animation: wobble 8s infinite;
   overflow: hidden; /* Hide content that overflows the window */
   margin:2px;
+  width: fit-content;
   /* display: flex; Use flexbox to center content vertically and horizontally */
   /* flex-direction: column; Stack content vertically */
   /* align-items: center; Center content horizontally */
@@ -1356,12 +1357,19 @@ button#start-button {
 }
 
 #sonicParametersContainer {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
-  margin-bottom: -20%;
-  width: 200vw;
+  /* margin-bottom: -20%; */
+  width: fit-content;
+  height: auto;
   align-items: center;
   padding: 0;
+}
+
+#sonicParams {
+
+  width: fit-content;
+  height: auto;
 }
 
 .popup {
