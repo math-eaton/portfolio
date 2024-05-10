@@ -22,6 +22,91 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }, 500);
 });
 
+// header text ticker
+
+class Ticker {
+  constructor(containerId, text, speed = 0.025) {
+    this.container = document.getElementById(containerId);
+    this.text = text;
+    this.speed = speed; // Pixels per millisecond
+    this.lastTime = 0;
+    this.totalWidth = 0;
+
+    this.init();
+  }
+
+  // Function to create a text div
+  createTextDiv() {
+    const div = document.createElement("div");
+    div.classList.add("ticker-text");
+    div.textContent = this.text;
+    return div;
+  }
+
+  // Initialize the ticker
+  init() {
+    const vwToPixels = window.innerWidth / 100;
+    const tempTextDiv = this.createTextDiv(); // Temporary div to calculate width
+    this.container.appendChild(tempTextDiv);
+    const textWidth = tempTextDiv.offsetWidth; // Width of the text block
+    this.container.removeChild(tempTextDiv); // Remove temporary div
+
+    const totalContainerWidth = window.innerWidth;
+    const numberOfBlocks = Math.ceil(totalContainerWidth / (textWidth + vwToPixels));
+
+    // Populate the container with the required number of text blocks
+    for (let i = 0; i < numberOfBlocks * 2; i++) { // Duplicate for seamless looping
+      const textDiv = this.createTextDiv();
+      this.container.appendChild(textDiv);
+    }
+
+    this.textElements = Array.from(this.container.querySelectorAll(".ticker-text"));
+    this.positionTextElements();
+    requestAnimationFrame(this.scrollText.bind(this));
+  }
+
+  // Position text elements
+  positionTextElements() {
+    const vwToPixels = window.innerWidth / 100;
+    let accumulatedWidth = 0;
+    this.textElements.forEach((text, index) => {
+      text.style.left = `${accumulatedWidth}px`;
+      accumulatedWidth += text.offsetWidth + vwToPixels;
+    });
+  }
+
+  // Scroll the text
+  scrollText(timestamp) {
+    if (!this.lastTime) this.lastTime = timestamp;
+    const deltaTime = timestamp - this.lastTime;
+
+    this.textElements.forEach((text) => {
+      let currentLeft = parseFloat(text.style.left);
+      currentLeft -= this.speed * deltaTime; // Move based on time
+
+      if (currentLeft <= -text.offsetWidth) {
+        currentLeft += this.textElements.length * (text.offsetWidth + (window.innerWidth / 100));
+      }
+      text.style.left = `${Math.round(currentLeft)}px`;
+    });
+
+    this.lastTime = timestamp;
+    requestAnimationFrame(this.scrollText.bind(this));
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const textArray1 = ["capstone"];
+    const ticker1 = new Ticker("tickerContainer1", textArray1);
+  
+    const textArray2 = ["towers"];
+    const ticker2 = new Ticker("tickerContainer2", textArray2);
+
+  });
+
+
+
 // iso3D();
 //   }, 1000);
 // });
@@ -61,10 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
       element.innerText = "NMU";
     } else if (element.innerText === "NMU") {
       element.innerText = "OK";
-    } else {
+    } else if (element.innerText === "OK") {
       element.innerText = "\u2665 \u2665 \u2665";
-    }
-
+    } else if (element.innerText === "\u2665 \u2665 \u2665")
+      element.innerText = "HELLO";
   });
 });
 

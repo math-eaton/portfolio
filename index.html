@@ -27,7 +27,7 @@
 or press escape to continue to webpage</textarea>
 </div>
 
-<div class="window" style="margin: 8%; width: 250px; height: 105px;">
+<div class="window" style="margin: 1%; width: 250px; height: 105px;">
     <div class="title-bar">
         <div class="title-bar-text">
             Hello people
@@ -39,17 +39,15 @@ or press escape to continue to webpage</textarea>
         </div>
     </div>
     <div class="window-body" style="bottom: 8px;">
-        <!-- <p>Refresh this page to find three hours of my life.</p> -->
         <section class="field-row" style="justify-content: center;">
             <button id="refresh-button">HELLO</button>
         </section>
     </div>
 </div>
 
-
 <div class="window full" id="bio">
     <div class="title-bar">
-        <div class="title-bar-text">Matthew Heaton</div>
+        <div class="title-bar-text">my name is Matthew Heaton</div>
         <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize" class="maximize-button"></button>
@@ -58,41 +56,22 @@ or press escape to continue to webpage</textarea>
         </div>
     </div>
     <div class="window-body text-content">
-        <div id="asciiOutput" style="text-align: center;">
-            <!-- ASCII output will be rendered here -->
-            <div id="asciiHeartsContainer1">
-                <!-- Dynamic ASCII content goes here -->
+        <div id="asciiOutput" style="position: relative;">
+            <div id="overlayText" style="position: absolute; top: 10%; width: 100%; text-align: center; pointer-events: none;">
+                <p style="font-size: 2em; margin: 0;">welcome to my portfolio</p>
+                <p>for columbia gsapp m.s. computational design practices</p>
+                <p>part-time summer 2022 thru spring 2024</p>
             </div>
-            <br>
+            <div id="asciiHeartsContainer1">
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="window" style="right: -80%; width: 250px; height: 105px;">
-        <div class="title-bar">
-            <div class="title-bar-text">
-                Wow
-            </div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body" style="bottom: 8px;">
-            <!-- <p>Refresh this page to find three hours of my life.</p> -->
-            <section class="window-body text-content" style="justify-content: center;">
-                <div  style="text-align: center">
-                    <img class="" src="gifs/link.gif"></img>
-                    <img class="" src="gifs/cd.gif"></img>
-                    <img class="" src="gifs/link.gif"></img>
-                    </div>
-                    </section>
-        </div>
-    </div>
 
 
-  
+<!-- NEW SECTION -->
+<div id="tickerContainer1" class="container ticker-container"></div>
 
 <div class="section" id="remote-sensing">
 
@@ -108,7 +87,7 @@ or press escape to continue to webpage</textarea>
         </div>
         <div class="window-body text-content">
             <p>to a geographer, the internet is a challenging object of inquiry
-                . . . the web flattens the intuitive experience of space while its users, infrastructure, and availability still have measurable positions in the ~real~ world 
+                . . . the web flattens the intuitive experience of space while its users, infrastructure, and availability still have measurable positions in the <em>"real"</em> world 
            </p>
            <p>this past year, i've attempted to explore the gap between physical & virtual ways of orientation by asking:
            </p>
@@ -121,9 +100,9 @@ or press escape to continue to webpage</textarea>
             
         </div>
         <div class="status-bar">
-        <p class="status-bar-field">Analog Infrastructure</p>
-        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-        <p class="status-bar-field">Space + Sight + Services</p>
+        <p class="status-bar-field">cdp colloquium</p>
+        <p class="status-bar-field"></p>
+        <p class="status-bar-field"></p>
         </div>
     </div>
 
@@ -150,31 +129,12 @@ or press escape to continue to webpage</textarea>
                 and the map as post-hoc interpretive device. Using spatial data as a visual score, this instrument aims to challenge conventional understanding of space and spatial representations.</p>        </div>
     </div>
 
-
-
-    <div class="window quarter" id="">
-        <div class="title-bar">
-            <div class="title-bar-text">HUHHH</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize" class="maximize-button"></button>
-                <button aria-label="Restore" class="restore-button"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body" id="sonicParametersContainer" style="width: 100%; height: max-content;">
-        </div>
-        <div class="status-bar">
-            <p class="status-bar-field">Analog Infrastructure</p>
-            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-            <p class="status-bar-field">Space + Sight + Services</p>
-        </div>
-    </div>
+    
 
     
-    <div class="window half" id="area">
+    <div class="window half" id="point">
         <div class="title-bar">
-            <div class="title-bar-text">Tower tour: Estimated propagation area imagery</div>
+            <div class="title-bar-text">instrument operation</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize" class="maximize-button"></button>
@@ -184,13 +144,11 @@ or press escape to continue to webpage</textarea>
         </div>
         <div class="window-body">
             <div class="">
-                <img class="monochrome" src="gifs/processed_imagery_area.gif"></img>
+                <img class="" src="gifs/device_demo.gif"></img>
             </div>
         </div>
         <div class="status-bar">
-            <p class="status-bar-field">Analog Infrastructure</p>
-            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-            <p class="status-bar-field">Space + Sight + Services</p>
+            <p class="status-bar-field">cdp colloquium</p>
         </div>
     </div>
     
@@ -211,15 +169,32 @@ or press escape to continue to webpage</textarea>
             </div>
         </div>
         <div class="status-bar">
-            <p class="status-bar-field">Analog Infrastructure</p>
-            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-            <p class="status-bar-field">Space + Sight + Services</p>
+            <p class="status-bar-field">cdp colloquium</p>
         </div>
     </div>
-    
-    <div class="window half" id="polyline">
+
+    <div class="window half about" style="right: 50%;">
         <div class="title-bar">
-            <div class="title-bar-text">Tower tour: Estimated propagation contours (08/07/23)</div>
+            <div class="title-bar-text">check it out</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <div class="">
+                <br>
+                <a href="https://math-eaton.github.io/remotesensing/">github.com</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="window quarter" id="polyline" style="margin: 5%;">
+        <div class="title-bar">
+            <div class="title-bar-text">Gui 2</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize" class="maximize-button"></button>
@@ -229,51 +204,46 @@ or press escape to continue to webpage</textarea>
         </div>
         <div class="window-body">
             <div class="">
-                <img class="monochrome" src="gifs/processed_imagery_polyline.gif"></img>
+                <img class="" src="/gifs/sensing_demo2.gif"></img>
             </div>
         </div>
         <div class="status-bar">
-            <p class="status-bar-field">Analog Infrastructure</p>
-            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-            <p class="status-bar-field">Space + Sight + Services</p>
+            <p class="status-bar-field">cdp colloquium</p>
         </div>
     </div>
-</div>
-    
-<!-- NEXT SECTION -->
-<div class="section">
-    <div class="window half about" style="left: 0%; width:50%">
-        <div class="title-bar">
-            <div class="title-bar-text">About: NYC mesh</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize" class="maximize-button"></button>
-                <button aria-label="Restore" class="restore-button"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body text-content">
 
-            <p>This project investigated the spatial and temporal makeup of the NYC Mesh WiFi network, a community driven internet network of activist-citizens building a freely accessible, open, wireless physical structure of interconnected routers.</p>
-                <p>Founded in 2014, NYC Mesh is currently concentrated in lower Manhattan and Brooklyn and is expanding with the efforts of user-volunteers. </p>
-               <p> The volunteer-run organization currently provides New Yorkers with over 623 active connections, bypassing the need for provision by conventional Internet Service Providers (ISPs) that 
-                constitute an oligopoly of internet service in NYC.
-            </p>
-            
+    <div class="window quarter" id="" style="bottom: 20vh;">
+    <div class="title-bar">
+        <div class="title-bar-text">sensory mapping</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize" class="maximize-button"></button>
+            <button aria-label="Restore" class="restore-button"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body img" id="sonicParametersContainer" style="width: 100%; height: 35vh; scale: 75%;">
     </div>
     <div class="status-bar">
-        <p class="status-bar-field"><em>in collaboration w/ eddie-joe antonio & mia winther-tamaki</em></p>
-        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
-        <p class="status-bar-field">Space + Sight + Services</p>
-  </div>
-
+        <p class="status-bar-field">cdp colloquium</p>
     </div>
+</div>
 
 
 
-    <div class="window" style="right: 5%" style="width: 15%">
+
+
+</div>
+
+
+<!-- NEXT SECTION -->
+<div id="tickerContainer2" class="container ticker-container"></div>
+
+
+<div class="section half" style="flex-wrap: wrap;" style="justify-content: center;">
+    <div class="window half">
         <div class="title-bar">
-            <div class="title-bar-text">NYC mesh</div>
+            <div class="title-bar-text">convex hulls</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize" class="maximize-button"></button>
@@ -282,28 +252,41 @@ or press escape to continue to webpage</textarea>
             </div>
         </div>
         <div class="window-body">
-                <img src="/images/nyc_mesh.png"></img>
+            <div class="p5" id="isoCubeContainer1">
+              </div>
+                </div>
+        <div class="status-bar">
+            <p class="status-bar-field">colloquium</p>
+            <p class="status-bar-field">methodology</p>
             </div>
+        </div>
+    <div class="window half about" style="right: 40%;">
+        <div class="title-bar">
+            <div class="title-bar-text">convex hulls + minimum spanning trees</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <div class="">
+                <p>bounding network nodes in three dimensions using convex hulls
+                    <br>illustrating my method to approximate cellular network catchment areas
+                </p>            
+                </div>
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">colloquium</p>
+        <p class="status-bar-field">methodology</p>
         </div>
     </div>
 
-    <!-- <div class="section">
-        <div class="window half about" style="left: 15%; width:50%">
-            <div class="title-bar">
-                <div class="title-bar-text">A note on AI authorship</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize" class="maximize-button"></button>
-                    <button aria-label="Restore" class="restore-button"></button>
-                    <button aria-label="Close"></button>
-                </div>
-            </div>
-            <div class="window-body" id="content-container">           
-                 </div>
-            </div>
-        </div>
-     -->
 </div>
+
+
+    
 
 <!-- NEXT SECTION -->
 
@@ -425,6 +408,7 @@ or press escape to continue to webpage</textarea>
     </div>
 </div>
 
+
 <!-- NEXT SECTION -->
 <div class="window quarter" id="window-ticker">
     <div class="title-bar">
@@ -493,62 +477,32 @@ or press escape to continue to webpage</textarea>
     </div>
 </div>
 
-<div class="section half" style="flex-wrap: wrap;" style="justify-content: center;">
-    <div class="window half">
-        <div class="title-bar">
-            <div class="title-bar-text">Spotify API</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize" class="maximize-button"></button>
-                <button aria-label="Restore" class="restore-button"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body">
-            <div class="full">
-                <figure class="p5 pointer" id="isoCubeContainer1">
-                </figure>
-                <figcaption>bounding network nodes in three dimensions using convex hulls
-                  <br>this technique can be used to visualize cellular network catchment areas
-                </figcaption>
-                <figure>       
-                  <img class="figure grayscale-invert-background static-image" src="/image/photo/viewshed_demo.webp">
-                    <!-- <figcaption>viewsheds</figcaption> -->
-                </figure>    
-              </div>
-                </div>
-        <div class="status-bar">
-        <p class="status-bar-field">Digital Infrastructure</p>
-        <p class="status-bar-field">Data Collection</p>
-        <p class="status-bar-field">Sound + Services</p>
-        </div>
-    </div>
-    <div class="window half about" style="right: 40%;">
-        <div class="title-bar">
-            <div class="title-bar-text">About: Spotify API</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize" class="maximize-button"></button>
-                <button aria-label="Restore" class="restore-button"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body text-content">
-            <div class="">
-                <p>Spotify for Developers (not to be confused with Spotify for Artists, their insecurity-exploiting analytics branch) 
-                    opens the hood up a little on their metadata scheme.</p>
-                <p>New music reaches listeners by way of a web of audio analysis and prediction algorithms, which don&#8217;t obviously use geography as a primary factor of discovery.
-                </p>
-            </div>
-        </div>
-        <div class="status-bar">
-        <p class="status-bar-field">Digital Infrastructure</p>
-        <p class="status-bar-field">Data Collection</p>
-        <p class="status-bar-field">Sound + Services</p>
-        </div>
-    </div>
 
+<!-- NEXT SECTION -->
+
+<div class="window" style="right: -20%; width: 250px; height: 105px;">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            Wow
+        </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body" style="bottom: 8px;">
+        <section class="window-body text-content" style="justify-content: center;">
+            <div  style="text-align: center; max-height: 50%">
+                <img class="" src="gifs/link.gif"></img>
+                <img class="" src="gifs/cd.gif"></img>
+                <img class="" src="gifs/link.gif"></img>
+                </div>
+                </section>
+    </div>
 </div>
+
+
 
 <div class="section">
     <div class="window half about">
@@ -610,6 +564,72 @@ or press escape to continue to webpage</textarea>
         </div>
     </div>
 </div>
+
+<!-- NEXT SECTION -->
+<div class="section">
+    <div class="window half about" style="left: 0%; width:50%">
+        <div class="title-bar">
+            <div class="title-bar-text">About: NYC mesh</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+
+            <p>This project investigated the spatial and temporal makeup of the NYC Mesh WiFi network, a community driven internet network of activist-citizens building a freely accessible, open, wireless physical structure of interconnected routers.</p>
+                <p>Founded in 2014, NYC Mesh is currently concentrated in lower Manhattan and Brooklyn and is expanding with the efforts of user-volunteers. </p>
+               <p> The volunteer-run organization currently provides New Yorkers with over 623 active connections, bypassing the need for provision by conventional Internet Service Providers (ISPs) that 
+                constitute an oligopoly of internet service in NYC.
+            </p>
+            
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field"><em>in collaboration w/ eddie-joe antonio & mia winther-tamaki</em></p>
+        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+        <p class="status-bar-field">Space + Sight + Services</p>
+  </div>
+
+    </div>
+
+
+
+    <div class="window" style="right: 5%" style="width: 15%">
+        <div class="title-bar">
+            <div class="title-bar-text">NYC mesh</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+                <img src="/images/nyc_mesh.png"></img>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="window half about" style="left: 15%; width:50%">
+            <div class="title-bar">
+                <div class="title-bar-text">A note on AI authorship</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize" class="maximize-button"></button>
+                    <button aria-label="Restore" class="restore-button"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body" id="content-container">           
+                 </div>
+            </div>
+        </div>
+     -->
+</div>
+
 
 <div class="section">
     <div class="window" id="">
