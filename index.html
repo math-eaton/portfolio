@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="css/os-gui/windows-default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    
+<div class="window-body" id="splash-window">
+    <textarea id="command-prompt" rows="25" cols="80" autofocus>C:\> MS CDP_HEATON Startup Menu
+        =============================
+        1. Normal
+        2. Logged (\BOOTLOG.TXT)
+        3. Safe Mode
+        4. Step-by-step confirmation
+        5. Command prompt only
+        6. Safe mode command prompt only
+
+        F5=Safe Mode Shift+F5=Command prompt Shift+F8= Step-by-step confirmation [N]
+        
+or press escape to continue to webpage</textarea>
+</div>
+
+<div class="window" style="margin: 8%; width: 250px; height: 105px;">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            Hello people
+        </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body" style="bottom: 8px;">
+        <!-- <p>Refresh this page to find three hours of my life.</p> -->
+        <section class="field-row" style="justify-content: center;">
+            <button id="refresh-button">HELLO</button>
+        </section>
+    </div>
+</div>
+
+
+<div class="window full" id="bio">
+    <div class="title-bar">
+        <div class="title-bar-text">Matthew Heaton</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize" class="maximize-button"></button>
+            <button aria-label="Restore" class="restore-button"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body text-content">
+        <div id="asciiOutput" style="text-align: center;">
+            <!-- ASCII output will be rendered here -->
+            <div id="asciiHeartsContainer1">
+                <!-- Dynamic ASCII content goes here -->
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+    <div class="window" style="right: -80%; width: 250px; height: 105px;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Wow
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body" style="bottom: 8px;">
+            <!-- <p>Refresh this page to find three hours of my life.</p> -->
+            <section class="window-body text-content" style="justify-content: center;">
+                <div  style="text-align: center">
+                    <img class="" src="gifs/link.gif"></img>
+                    <img class="" src="gifs/cd.gif"></img>
+                    <img class="" src="gifs/link.gif"></img>
+                    </div>
+                    </section>
+        </div>
+    </div>
+
+
+  
+
+<div class="windows-container" id="remote-sensing">
+
+    <div class="window quarter about" style="left: 0%;">
+        <div class="title-bar">
+            <div class="title-bar-text">About: remote sensing (1/2)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <p>to a geographer, the internet is a challenging object of inquiry
+                . . . the web flattens the intuitive experience of space while its users, infrastructure, and availability still have measurable positions in the ~real~ world 
+           </p>
+           <p>this past year, i've attempted to explore the gap between physical & virtual ways of orientation by asking:
+           </p>
+   
+   
+           <p class="upper">How can we explore virtual (and ostensibly immaterial) connectivity as it relates to a physical world?</p>
+           <p class="upper">Where are the furthest edges of an existing virtual backbone that is propagated over copper, glass, air, water, and soil?</p>
+           <p class="upper">and, more experimentally, <em>How could treating spatial data as a score + the map as performable medium challenge conventional understandings of space and its representation??</em></p>
+             </p>
+            
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+        <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+
+    <div class="window quarter about">
+        <div class="title-bar">
+            <div class="title-bar-text">About: remote sensing (2/2)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+
+            <p>The concept for this project originated on a short tour with the band Kitchen in March of last year. Between Ithaca and Burlington, we took snowy Adirondack back roads 
+                through the town of Speculator. Cell signal receded, then FM, then we switched the receiver to AM and bathed in full-volume static.</p>
+
+            <p>When using a receiver, one can surf channels not just with a frequency tuner but with their very traversal through space. 
+                Nuances of landscape and context manifest through signal ratios. The noise (versus signal) is what I find most compelling. 
+                Tones and timbres of decoded waves from a universe of noise mutate endlessly depending on one's position and orientation.</p>
+            
+            <p>With this map-as-instrument, I explore this phenomenon to distort the division between the (scientific/musical) instrument as realtime (measurement/performance) tool, 
+                and the map as post-hoc interpretive device. Using spatial data as a visual score, this instrument aims to challenge conventional understanding of space and spatial representations.</p>        </div>
+    </div>
+
+
+    <div class="window" id="point">
+        <div class="title-bar">
+            <div class="title-bar-text">HUHHH</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_point.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+    
+    <div class="window half" id="area">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Estimated propagation area imagery</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_area.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+    
+
+    <div class="window half" id="combined">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Propagation area w/ contours</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/combined.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+    
+    <div class="window half" id="polyline">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Estimated propagation contours (08/07/23)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_polyline.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+</div>
+    
+<!-- NEXT SECTION -->
+<div class="windows-container">
+    <div class="window half about" style="left: 0%; width:50%">
+        <div class="title-bar">
+            <div class="title-bar-text">About: NYC mesh</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+
+            <p>This project investigated the spatial and temporal makeup of the NYC Mesh WiFi network, a community driven internet network of activist-citizens building a freely accessible, open, wireless physical structure of interconnected routers.</p>
+                <p>Founded in 2014, NYC Mesh is currently concentrated in lower Manhattan and Brooklyn and is expanding with the efforts of user-volunteers. </p>
+               <p> The volunteer-run organization currently provides New Yorkers with over 623 active connections, bypassing the need for provision by conventional Internet Service Providers (ISPs) that 
+                constitute an oligopoly of internet service in NYC.
+            </p>
+            
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field"><em>in collaboration w/ eddie-joe antonio & mia winther-tamaki</em></p>
+        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+        <p class="status-bar-field">Space + Sight + Services</p>
+  </div>
+
+    </div>
+
+
+
+    <div class="window" style="right: 5%" style="width: 15%">
+        <div class="title-bar">
+            <div class="title-bar-text">NYC mesh</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+                <img src="/images/nyc_mesh.png"></img>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="windows-container">
+        <div class="window half about" style="left: 15%; width:50%">
+            <div class="title-bar">
+                <div class="title-bar-text">A note on AI authorship</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize" class="maximize-button"></button>
+                    <button aria-label="Restore" class="restore-button"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body" id="content-container">           
+                 </div>
+            </div>
+        </div>
+     -->
+</div>
+
+<!-- NEXT SECTION -->
+
+
+<div class="windows-container" id="radio-container">
+    <div class="window" id="point">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Zoom level 15 imagery</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_point.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+      </div>
+    </div>
+    
+    <div class="window half" id="area">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Estimated propagation area imagery</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_area.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+      </div>
+    </div>
+    
+    <div class="window half about" style="left: 30%;">
+        <div class="title-bar">
+            <div class="title-bar-text">About: Tower tour</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <p>These are the results of an exploratory exercise into the expansive spatial data archive the Federal Communications Commission maintains in their open data portal.</p>
+
+            <p>In addition to transmitter locations, the FCC hosts a .txt database of estimated propagation curves that is updated daily based on local weather conditions. By superimposing these curves on aerial imagery, one can note the effect of terrain on radio propagation.</p>
+            
+            <p>These embedded animations are a subset &#40;n=178&#41; of the 27,104 FM transmitters and relays registered with the FCC. Imagery is scraped from the Bing Maps API based on transmitter coordinates  &#40;Zoom Level 15&#41; and total extent of each propagation curve surrounding the transmitter &#40;Estimated Propagation Area&#41;.
+            
+            <p>Imagery was processed using Floyd-Steinberg dithering in python image library to optimize for web view before assembling into GIFs.</p>
+            
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+        <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+
+    <div class="window half" id="combined">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Propagation area w/ contours</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/combined.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+    
+    <div class="window half" id="polyline">
+        <div class="title-bar">
+            <div class="title-bar-text">Tower tour: Estimated propagation contours (08/07/23)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img class="monochrome" src="gifs/processed_imagery_polyline.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Analog Infrastructure</p>
+            <p class="status-bar-field">GIS + Web Scraping + Image Processing</p>
+            <p class="status-bar-field">Space + Sight + Services</p>
+        </div>
+    </div>
+</div>
+
+<!-- NEXT SECTION -->
+<div class="window quarter" id="window-ticker">
+    <div class="title-bar">
+        <div class="title-bar-text">A Very Important Message</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize" class="maximize-button"></button>
+            <button aria-label="Restore" class="restore-button"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body ticker-container text-content">
+        <h1 class="ticker-text">I LOVE TO MAKE WEBSITES NOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field" id="cpu">CPU Usage: 1000000000000000000000000000000000000%</p>
+    </div>
+</div>
+
+
+<div class="windows-container">
+    <div class="window half about">
+        <div class="title-bar">
+            <div class="title-bar-text">About: Peripheral transmissions</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <p>A geographic radio receiver.</p>
+            <p>This application enables a user to survey an audio landscape constructed by scraped internet radio &quot;transmissions&quot; tethered to the geographic coordinates of their host stations.</p>
+            <p>The interpolated spaces between these discrete coordinates create alternative boundary regions constructed by radio and its attendant cultural affinities rather than the (often violently drawn) lines found on a political map.</p>
+            <p>Pictured: Baja California to the Gulf of Mexico</p>
+
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">Sonic Visualization + Visual Sonification</p>
+        <p class="status-bar-field">Space + Sight + Sound</p>
+        </div>
+    </div>
+
+    <div class="window" id="WFH_DJ">
+        <div class="title-bar">
+            <div class="title-bar-text">Peripheral transmissions </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img src="gifs/peripheralTransmissions.gif"></img>
+            </div>
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">Sonic Visualization + Visual Sonification</p>
+        <p class="status-bar-field">Space + Sight + Sound</p>
+        </div>
+    </div>
+</div>
+
+<div class="windows-container half" style="flex-wrap: wrap;" style="justify-content: center;">
+    <div class="window half">
+        <div class="title-bar">
+            <div class="title-bar-text">Spotify API</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="column figure">
+                <figure class="p5 pointer" id="isoCubeContainer1">
+                </figure>
+                <figcaption>bounding network nodes in three dimensions using convex hulls
+                  <br>this technique can be used to visualize cellular network catchment areas
+                </figcaption>
+                <figure>       
+                  <img class="figure grayscale-invert-background static-image" src="/image/photo/viewshed_demo.webp">
+                    <!-- <figcaption>viewsheds</figcaption> -->
+                </figure>    
+              </div>
+                </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Digital Infrastructure</p>
+        <p class="status-bar-field">Data Collection</p>
+        <p class="status-bar-field">Sound + Services</p>
+        </div>
+    </div>
+    <div class="window half about" style="right: 40%;">
+        <div class="title-bar">
+            <div class="title-bar-text">About: Spotify API</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">
+            <div class="">
+                <p>Spotify for Developers (not to be confused with Spotify for Artists, their insecurity-exploiting analytics branch) 
+                    opens the hood up a little on their metadata scheme.</p>
+                <p>New music reaches listeners by way of a web of audio analysis and prediction algorithms, which don&#8217;t obviously use geography as a primary factor of discovery.
+                </p>
+            </div>
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Digital Infrastructure</p>
+        <p class="status-bar-field">Data Collection</p>
+        <p class="status-bar-field">Sound + Services</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="windows-container">
+    <div class="window half about">
+        <div class="title-bar">
+            <div class="title-bar-text">About: WFH DJ</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content"><p>This is a &quot;patch&quot; [script] written in Max/MSP, a visual coding language that is great for bridging audio inside and outside the computer.</p>
+
+            <p>The goal of this patch was to capture some of the thousands of miniature events that take place while 
+                using a computer during a typical workday and recontextualize those events into an audio piece - in this case a remix of Terry Riley&#8217;s 1968 minimalist piece &quot;In C&quot;.</p>
+
+            <p>Keypresses, mouse downs, and microphone transients trigger a count. The frequency of these events defines an environmental energy level. At certain thresholds, audio content and quality changes, sequencing the remix.</p>
+            </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Digital Infrastructure</p>
+        <p class="status-bar-field">Data Sonification</p>
+        <p class="status-bar-field">Sound + Space</p>
+        </div>
+    </div>
+
+    <div class="window" id="WFH_DJ">
+        <div class="title-bar">
+            <div class="title-bar-text">WFH DJ</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <video width="1920" height="1080" autoplay muted loop>
+                <source src="gifs/WFH_DJ.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>       
+        <div class="field-row audio-player">
+            <label for="range26">Volume:</label>
+            <label for="range26">Low</label>
+            <input id="range26" type="range" min="0" max="1" step="0.01" value="0.5" />
+            <label for="range26">High</label>
+            <audio id="myAudio" loop>
+                <source src="audio/WFH_DJ_processed.mp3" type="audio/mpeg">
+            </audio>
+            <img id="playButton" src="sprites/loudspeaker_muted-0.png" alt="Play">
+            <img id="pauseButton" src="sprites/loudspeaker_rays-0.png" alt="Pause" style="display: none;">
+            <p>CLICK HERE TO LISTEN TO A SAMPLE!</p>
+        </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Digital Infrastructure</p>
+        <p class="status-bar-field">Data Sonification</p>
+        <p class="status-bar-field">Sound + Space</p>
+        </div>
+    </div>
+</div>
+
+<div class="windows-container">
+    <div class="window" id="">
+        <div class="title-bar">
+            <div class="title-bar-text">Concrete poetry</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="">
+                <img src="gifs/concretePoetry.gif"></img>
+            </div>
+            </div>       
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">Sonic Visualization</p>
+        <p class="status-bar-field">Space + Sight</p>
+        </div>
+    </div>
+    <div class="window half about">
+        <div class="title-bar">
+            <div class="title-bar-text">About: Concrete poetry</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" class="maximize-button"></button>
+                <button aria-label="Restore" class="restore-button"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body text-content">This is a platform for New Yorkers to document snapshots of a space through words they hear on the street: oddities, banalities, and everything in between.</p>
+
+            <p>Users input bits of conversation they come across on the streets of the city, as well as the approximate location it took place, then submit the form.
+                The resulting map presents the candid character of a neighborhood or borough.
+            </p>
+            <p>Each submission is also streamed into a sidebar that builds a growing poem of New York as a whole.
+            </p>
+            </div>
+        <div class="status-bar">
+        <p class="status-bar-field">Analog Infrastructure</p>
+        <p class="status-bar-field">Sonic Visualization</p>
+        <p class="status-bar-field">Space + Sight</p>
+        </div>
+    </div>
+</div>
+
+<div class="window" style="margin: 8%; width: 250px; height: 105px; left: 60%;">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            That's it for now
+        </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body" style="bottom: 8px;">
+        <p>see you later!</p>
+        <section class="field-row" style="justify-content: center;">
+            <button id="refresh-button-2">bye</button>
+        </section>
+    </div>
+</div>
+
+
+<div class="bouncing-container"></div>
+
+<script type="module" src="src/js/main.js" defer></script>
+
+</body>
+</html>
