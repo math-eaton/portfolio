@@ -10,6 +10,9 @@ import { wavetable } from "./wavetable.js";
 import { isometricCube } from "./isometricCube.js";
 import { sonicParameters } from "./parameters.js";
 
+document.addEventListener('load', init());
+
+function init(){
 
 document.addEventListener("DOMContentLoaded", (event) => {
   setTimeout(() => {
@@ -24,86 +27,86 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 // header text ticker
 
-class Ticker {
-  constructor(containerId, text, speed = 0.025) {
-    this.container = document.getElementById(containerId);
-    this.text = text;
-    this.speed = speed; // Pixels per millisecond
-    this.lastTime = 0;
-    this.totalWidth = 0;
+// class Ticker {
+//   constructor(containerId, text, speed = 0.025) {
+//     this.container = document.getElementById(containerId);
+//     this.text = text;
+//     this.speed = speed; // Pixels per millisecond
+//     this.lastTime = 0;
+//     this.totalWidth = 0;
 
-    this.init();
-  }
+//     this.init();
+//   }
 
-  // Function to create a text div
-  createTextDiv() {
-    const div = document.createElement("div");
-    div.classList.add("ticker-text");
-    div.textContent = this.text;
-    return div;
-  }
+//   // Function to create a text div
+//   createTextDiv() {
+//     const div = document.createElement("div");
+//     div.classList.add("ticker-text");
+//     div.textContent = this.text;
+//     return div;
+//   }
 
-  // Initialize the ticker
-  init() {
-    const vwToPixels = window.innerWidth / 100;
-    const tempTextDiv = this.createTextDiv(); // Temporary div to calculate width
-    this.container.appendChild(tempTextDiv);
-    const textWidth = tempTextDiv.offsetWidth; // Width of the text block
-    this.container.removeChild(tempTextDiv); // Remove temporary div
+//   // Initialize the ticker
+//   init() {
+//     const vwToPixels = window.innerWidth / 100;
+//     const tempTextDiv = this.createTextDiv(); // Temporary div to calculate width
+//     this.container.appendChild(tempTextDiv);
+//     const textWidth = tempTextDiv.offsetWidth; // Width of the text block
+//     this.container.removeChild(tempTextDiv); // Remove temporary div
 
-    const totalContainerWidth = window.innerWidth;
-    const numberOfBlocks = Math.ceil(totalContainerWidth / (textWidth + vwToPixels));
+//     const totalContainerWidth = window.innerWidth;
+//     const numberOfBlocks = Math.ceil(totalContainerWidth / (textWidth + vwToPixels));
 
-    // Populate the container with the required number of text blocks
-    for (let i = 0; i < numberOfBlocks * 2; i++) { // Duplicate for seamless looping
-      const textDiv = this.createTextDiv();
-      this.container.appendChild(textDiv);
-    }
+//     // Populate the container with the required number of text blocks
+//     for (let i = 0; i < numberOfBlocks * 2; i++) { // Duplicate for seamless looping
+//       const textDiv = this.createTextDiv();
+//       this.container.appendChild(textDiv);
+//     }
 
-    this.textElements = Array.from(this.container.querySelectorAll(".ticker-text"));
-    this.positionTextElements();
-    requestAnimationFrame(this.scrollText.bind(this));
-  }
+//     this.textElements = Array.from(this.container.querySelectorAll(".ticker-text"));
+//     this.positionTextElements();
+//     requestAnimationFrame(this.scrollText.bind(this));
+//   }
 
-  // Position text elements
-  positionTextElements() {
-    const vwToPixels = window.innerWidth / 100;
-    let accumulatedWidth = 0;
-    this.textElements.forEach((text, index) => {
-      text.style.left = `${accumulatedWidth}px`;
-      accumulatedWidth += text.offsetWidth + vwToPixels;
-    });
-  }
+//   // Position text elements
+//   positionTextElements() {
+//     const vwToPixels = window.innerWidth / 100;
+//     let accumulatedWidth = 0;
+//     this.textElements.forEach((text, index) => {
+//       text.style.left = `${accumulatedWidth}px`;
+//       accumulatedWidth += text.offsetWidth + vwToPixels;
+//     });
+//   }
 
-  // Scroll the text
-  scrollText(timestamp) {
-    if (!this.lastTime) this.lastTime = timestamp;
-    const deltaTime = timestamp - this.lastTime;
+//   // Scroll the text
+//   scrollText(timestamp) {
+//     if (!this.lastTime) this.lastTime = timestamp;
+//     const deltaTime = timestamp - this.lastTime;
 
-    this.textElements.forEach((text) => {
-      let currentLeft = parseFloat(text.style.left);
-      currentLeft -= this.speed * deltaTime; // Move based on time
+//     this.textElements.forEach((text) => {
+//       let currentLeft = parseFloat(text.style.left);
+//       currentLeft -= this.speed * deltaTime; // Move based on time
 
-      if (currentLeft <= -text.offsetWidth) {
-        currentLeft += this.textElements.length * (text.offsetWidth + (window.innerWidth / 100));
-      }
-      text.style.left = `${Math.round(currentLeft)}px`;
-    });
+//       if (currentLeft <= -text.offsetWidth) {
+//         currentLeft += this.textElements.length * (text.offsetWidth + (window.innerWidth / 100));
+//       }
+//       text.style.left = `${Math.round(currentLeft)}px`;
+//     });
 
-    this.lastTime = timestamp;
-    requestAnimationFrame(this.scrollText.bind(this));
-  }
-}
+//     this.lastTime = timestamp;
+//     requestAnimationFrame(this.scrollText.bind(this));
+//   }
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    const textArray1 = ["capstone"];
-    const ticker1 = new Ticker("tickerContainer1", textArray1);
+//     const textArray1 = ["capstone"];
+//     const ticker1 = new Ticker("tickerContainer1", textArray1);
   
-    const textArray2 = ["towers"];
-    const ticker2 = new Ticker("tickerContainer2", textArray2);
+//     const textArray2 = ["towers"];
+//     const ticker2 = new Ticker("tickerContainer2", textArray2);
 
-  });
+//   });
 
 
 
@@ -161,75 +164,6 @@ element.addEventListener("click", function() {
   location.reload();
 });
 
-
-window.addEventListener('load', function() {
-  var windows = document.getElementsByClassName('window');
-  var svg = createSvgElement();
-
-  for (var i = 0; i < windows.length; i++) {
-      // var offset = Math.random() * 10;
-      // windows[i].style.transform = 'translate(' + offset + '%, ' + offset + '%)';
-      // windows[i].style.top = Math.random() * 1 + '%'; // limit to 5%
-      // windows[i].style.left = Math.random() * 1 + '%'; // limit to 20%
-
-      var duration = Math.random() * (15 - 10) + 10; // Random duration between 10 and 20 seconds
-      var delay = Math.random() * 1; // Random delay up to 1 second
-      windows[i].style.animationDuration = duration + 's';
-      windows[i].style.animationDelay = delay + 's';
-
-      // Update lines for SVG
-      updateLines(svg, windows[i]);
-  }
-
-  document.body.appendChild(svg);
-});
-
-// Create the SVG element
-function createSvgElement() {
-  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.style.width = '100%';
-  svg.style.height = '100%';
-  svg.style.position = 'absolute';
-  svg.style.top = '0';
-  svg.style.left = '0';
-  svg.style.zIndex = '0'; // Place the SVG below other elements
-  svg.style.pointerEvents = 'none';
-  return svg;
-}
-
-// Update lines for SVG
-function updateLines(svg, floater) {
-  var lines = svg.getElementsByTagName('line');
-
-  // If there are not enough lines, create more
-  while (lines.length < floater.length - 1) {
-      var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('stroke', '#eeff00');
-      line.setAttribute('stroke-width', '2');
-      svg.appendChild(line);
-  }
-
-  // Update the position of each line
-  for (var i = 0; i < floater.length - 1; i++) {
-      var rect1 = floater[i].getBoundingClientRect();
-      var x1 = rect1.left + window.scrollX + rect1.width / 2;
-      var y1 = rect1.top + window.scrollY + rect1.height / 2;
-
-      var rect2 = floater[i + 1].getBoundingClientRect();
-      var x2 = rect2.left + window.scrollX + rect2.width / 2;
-      var y2 = rect2.top + window.scrollY + rect2.height / 2;
-
-      lines[i].setAttribute('x1', x1);
-      lines[i].setAttribute('y1', y1);
-      lines[i].setAttribute('x2', x2);
-      lines[i].setAttribute('y2', y2);
-  }
-
-  // Call this function again on the next frame
-  requestAnimationFrame(function() {
-      updateLines(svg, floater);
-  });
-}
 
 
 // jquery dragging / resizing functions
@@ -348,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = 0;
       }
 
-      var x = Math.random() * document.documentElement.scrollWidth;
+      var x = Math.random() * document.documentElement.innerWidth;
       var y = Math.random() * document.documentElement.scrollHeight;
       var vx = (Math.random() - 0.5) * 0.85;
       var vy = (Math.random() - 0.5) * 0.85;
@@ -623,7 +557,7 @@ const backgroundImages = [
 function updateBouncingContainerSize() {
   const bouncingContainer = document.querySelector('.bouncing-container');
   bouncingContainer.style.width = window.innerWidth + 'px';
-  bouncingContainer.style.height = fullBodyHeight + 'px'; // Set height to full body height
+  bouncingContainer.style.height = document.documentElement.scrollHeight + 'px'; // Set height to total document height
 }
 
 // Call the function initially and whenever the window is resized
@@ -689,3 +623,4 @@ updateZoom();
 
 // Listen for the window resize event
 window.addEventListener('resize', updateZoom);
+}

@@ -146,7 +146,7 @@ button {
   width: 100%;
   overflow: hidden;
   color: #ff0000;
-  position: relative; /* Change to relative positioning */
+  position: relative; 
   height: 50px;
 }
 
@@ -157,7 +157,7 @@ button {
   top: 0;
   left: 100%; /* Start off-screen to the right */
   white-space: nowrap;
-  animation: ticker 10s linear infinite; /* Apply the ticker animation */
+  animation: ticker 10s linear infinite;
   z-index: 5;
 }
 
@@ -202,7 +202,7 @@ button {
   padding-right: 5%;
   display: inline-block;
   z-index: 2;
-  cursor: url('assets/cursors/cursor_15.cur'), auto;
+  cursor: url('../cursor/point.cur'), auto;
   /* visibility: hidden; */
 }
 
@@ -217,7 +217,7 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1; /* To place it behind other elements */
+  z-index: -1;
   overflow: hidden; /* To prevent scrolling */
 }
 
@@ -241,12 +241,12 @@ button {
 
 /* Add the "grab" cursor style to draggable windows */
 .window.ui-draggable {
-  cursor: url('../assets/cursors/Cursor_15.cur'), auto;
+  cursor: url('../cursor/point.cur'), auto;
 }
 
 /* Change cursor to "grabbing" when dragging */
 .window.ui-draggable-dragging {
-  cursor: url('../assets/cursors/grabbing.cur'), auto;
+  cursor: url('../cursor/point.cur'), auto;
 }
 
 #header {
@@ -484,9 +484,6 @@ button {
   margin-left: -10%
 }
 
-#refresh-button{
-  /* color: red; */
-}
 
 h1 { font-family: Papyrus, fantasy; font-size: 10px; font-style: normal; font-variant: small-caps; font-weight: 700; line-height: 11px; } 
 
