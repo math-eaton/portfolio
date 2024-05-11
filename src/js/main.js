@@ -6,7 +6,7 @@
 // import { iso3D } from "./iso3D.js";
 import { asciiHearts } from "./asciiHearts.js";
 // import { terrain } from "./terrain.js";
-import { wavetable } from "./wavetable.js";
+// import { wavetable } from "./wavetable.js";
 import { isometricCube } from "./isometricCube.js";
 import { sonicParameters } from "./parameters.js";
 

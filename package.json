@@ -23,6 +23,7 @@
     "simplex-noise": "^4.0.1",
     "stylelint": "^16.5.0",
     "three": "^0.164.1",
-    "vite-plugin-purgecss": "^0.2.12"
+    "vite-plugin-purgecss": "^0.2.12",
+    "webpack": "^5.91.0"
   }
 }
